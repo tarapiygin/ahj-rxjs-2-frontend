@@ -100,3 +100,22 @@ h2 {
   text-decoration: underline;
   cursor: pointer;
 }
+.loading-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f1f3;
+}
+.loading-image{
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+.hidden{
+  display: none;
+}

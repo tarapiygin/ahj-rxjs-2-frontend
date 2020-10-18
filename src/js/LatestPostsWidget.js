@@ -12,6 +12,7 @@ moment.locale('ru');
 export default class PostWidget {
   constructor(url) {
     this.container = document.querySelector('.container');
+    this.loadingImg = document.querySelector('.loading-container');
     this.url = url;
   }
 
@@ -67,6 +68,7 @@ export default class PostWidget {
           ))),
         )),
     ).subscribe((posts) => {
+      this.loadingImg.classList.add('hidden');
       this.container.innerHTML = '';
       posts.forEach((post) => this.drawPost(post));
     });
